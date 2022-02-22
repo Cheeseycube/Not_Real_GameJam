@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     PolygonCollider2D BodyCollider;
     BoxCollider2D FeetCollider;
+    SpriteRenderer spriteRenderer;
 
     // Serialized Fields
     [SerializeField] float runSpeed = 5f;
@@ -23,12 +24,16 @@ public class Player : MonoBehaviour
     // booleans
     private bool isDead = false;
     private bool isJumping = false;
+    //private bool isFlipped = false;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         BodyCollider = GetComponent<PolygonCollider2D>();
         FeetCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        //spriteRenderer.flipX = true;
     }
 
     
@@ -46,6 +51,15 @@ public class Player : MonoBehaviour
         }
         float horizontalInput = Input.GetAxisRaw("Horizontal"); // value between -1 and +1
         rb.velocity = new Vector2(horizontalInput * runSpeed, rb.velocity.y);
+
+        if (horizontalInput < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (horizontalInput > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     private void Jump()
