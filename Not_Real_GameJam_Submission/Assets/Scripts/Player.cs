@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     // floats
     float mayJump = 0.1f;
     float timer;
+    float health = 100f;
 
     // integers
 
@@ -96,6 +97,15 @@ public class Player : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
+        }
+    }
+
+    public void TakeDamage(float damageDealt)
+    {
+        this.health -= damageDealt;
+        if(health <= 0f)
+        {
+            this.isDead = true;
         }
     }
 }
