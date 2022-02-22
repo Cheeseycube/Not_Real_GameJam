@@ -15,16 +15,6 @@ public class ContactDamageEnemy : MonoBehaviour
     void Start()
     {
         damageCollider = GetComponent<BoxCollider2D>();
-        // Get the player object
-        /*playerGameObject = GameObject.Find("Player");
-        if (playerGameObject != null)
-        {
-            player = playerGameObject.GetComponent<Player>();
-        }
-        else
-        {
-            Debug.Log("eeeeeeeee");
-        }*/
 
     }
 

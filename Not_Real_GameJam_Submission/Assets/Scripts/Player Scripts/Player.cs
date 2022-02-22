@@ -18,12 +18,12 @@ public class Player : MonoBehaviour
     // floats
     float mayJump = 0.1f;
     float timer;
-    [SerializeField] float health = 100f;
+    [SerializeField] public static float health = 100f;
 
     // integers
 
     // booleans
-    private bool isDead = false;
+    public static bool PlayerDead = false;
     private bool isJumping = false;
     //private bool isFlipped = false;
 
@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
         FeetCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        //spriteRenderer.flipX = true;
     }
 
 
@@ -46,7 +45,7 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        if (isDead)
+        if (PlayerDead)
         {
             return;
         }
@@ -65,7 +64,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (isDead)
+        if (PlayerDead)
         {
             return;
         }
@@ -102,10 +101,10 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float damageDealt)
     {
-        this.health -= damageDealt;
+        health -= damageDealt;
         if (health <= 0f)
         {
-            this.isDead = true;
+            PlayerDead = true;
         }
     }
 }
