@@ -5,14 +5,14 @@ using UnityEngine;
 public class ContactDamageEnemy : MonoBehaviour
 {
     BoxCollider2D damageCollider;
-    GameObject playerGameObject;
-    Player player;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        damageCollider = GetComponent<BoxCollider2D>();
         // Get the player object
-        playerGameObject = GameObject.Find("Player");
+        /*playerGameObject = GameObject.Find("Player");
         if (playerGameObject != null)
         {
             player = playerGameObject.GetComponent<Player>();
@@ -20,7 +20,7 @@ public class ContactDamageEnemy : MonoBehaviour
         else
         {
             Debug.Log("eeeeeeeee");
-        }
+        }*/
 
     }
 
@@ -29,7 +29,7 @@ public class ContactDamageEnemy : MonoBehaviour
     {
         if (damageCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            player.TakeDamage(25f);
+            FindObjectOfType<Player>().TakeDamage(25f);
         }
     }
 
