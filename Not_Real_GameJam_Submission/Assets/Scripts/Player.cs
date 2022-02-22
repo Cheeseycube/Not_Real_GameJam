@@ -64,7 +64,6 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && (mayJump > 0f))
         {
-            print("jumping");
             timer = Time.time;
             isJumping = true;
             rb.velocity = new Vector2(0f, jumpSpeed);
