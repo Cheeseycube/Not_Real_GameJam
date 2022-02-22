@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     // floats
     float mayJump = 0.1f;
     float timer;
+    [SerializeField] float health = 100f;
 
     // integers
 
@@ -25,7 +26,7 @@ public class Player : MonoBehaviour
     private bool isDead = false;
     private bool isJumping = false;
     //private bool isFlipped = false;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
         //spriteRenderer.flipX = true;
     }
 
-    
+
     void Update()
     {
         Run();
@@ -96,6 +97,15 @@ public class Player : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
+        }
+    }
+
+    public void TakeDamage(float damageDealt)
+    {
+        this.health -= damageDealt;
+        if (health <= 0f)
+        {
+            this.isDead = true;
         }
     }
 }
