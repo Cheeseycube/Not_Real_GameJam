@@ -37,7 +37,7 @@ public class StateCameras : MonoBehaviour
     private void Level0()
     {
         Vector3 Playerpos = gameObject.transform.position;
-        if (Playerpos.x > 63)
+        if (Playerpos.x > 60)
         {
             myAnim.SetBool("Player bottom", true);
             myAnim.SetBool("Player top", false);
