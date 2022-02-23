@@ -7,6 +7,7 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
         if (numGameSessions > 1)
         {
