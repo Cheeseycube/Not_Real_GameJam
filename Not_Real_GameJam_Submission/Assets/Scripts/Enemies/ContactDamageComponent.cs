@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ContactDamageEnemy : MonoBehaviour
+public class ContactDamageComponent : MonoBehaviour
 {
     // Components
     BoxCollider2D damageCollider;
 
     // Booleans
     private bool CanDamage = true;
-    
+
 
     // Start is called before the first frame update
     void Start()
