@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class EnemyMotion_Pace : MonoBehaviour
 {
-    Rigidbody2D body;
-    // Start is called before the first frame update
-    void Start()
-    {
-        body = this.GetComponentInParent<Rigidbody2D>();
-    }
+    [SerializeField] private GameObject[] waypoints;
+    private int currWaypointIndex = 0;
+
+    [SerializeField] private float speed = 3f;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        body.velocity = new Vector2(-6f, 0);
+        if (Vector2.Distance(waypoints[currWaypointIndex].transform.position, transform.position) < .1f)
+        {
+            ++currWaypointIndex;
+            if (currWaypointIndex >= waypoints.Length)
+            {
+                currWaypointIndex = 0;
+            }
+        }
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[currWaypointIndex].transform.position, Time.deltaTime * speed);
     }
 }
