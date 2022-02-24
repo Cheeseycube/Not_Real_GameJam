@@ -5,12 +5,14 @@ using UnityEngine;
 public class CutscenePlayer : MonoBehaviour
 {
     Rigidbody2D rb;
+    public GameObject speechBubble;
 
     private float timer;
     private bool isWalking = false;
     // Start is called before the first frame update
     void Start()
     {
+        speechBubble.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
         timer = 1f;
         StartCoroutine(Walking());
@@ -31,6 +33,8 @@ public class CutscenePlayer : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(0f, 0f);
+            speechBubble.SetActive(true);
+
         }
     }
 
