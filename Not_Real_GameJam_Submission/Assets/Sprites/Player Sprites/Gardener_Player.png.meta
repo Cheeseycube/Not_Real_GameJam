@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: ea68d09215b9cb44b90648383ef6125d
+guid: 53eb06f7872ea354595a0e83c07a9d27
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 9183938694928590205
-    second: Bird-hop-Sheet_0
-  - first:
-      213: 1669529819500262175
-    second: Bird-hop-Sheet_1
-  - first:
-      213: -3317301074818688206
-    second: Bird-hop-Sheet_2
-  - first:
-      213: 4800307534075187026
-    second: Bird-hop-Sheet_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,91 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Bird-hop-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 0
-        width: 247
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d75ee2e9597e37f70800000000000000
-      internalID: 9183938694928590205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird-hop-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 0
-        width: 247
-        height: 207
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f133c39768c5b2710800000000000000
-      internalID: 1669529819500262175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird-hop-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 513
-        y: 17
-        width: 247
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23b196e8f3496f1d0800000000000000
-      internalID: -3317301074818688206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird-hop-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 769
-        y: 17
-        width: 247
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25fce25e44e1e9240800000000000000
-      internalID: 4800307534075187026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
