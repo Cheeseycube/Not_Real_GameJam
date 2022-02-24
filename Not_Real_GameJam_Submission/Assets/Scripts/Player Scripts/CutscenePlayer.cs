@@ -27,8 +27,6 @@ public class CutscenePlayer : MonoBehaviour
         if (Time.time - timer < 3.2f)
         {
             StartCoroutine(Walking());
-            print("This is the current time:" + Time.time);
-            print("This is the timer:" + timer);
         }
         else
         {
