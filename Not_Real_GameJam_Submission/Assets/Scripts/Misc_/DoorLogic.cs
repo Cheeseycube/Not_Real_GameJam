@@ -10,7 +10,7 @@ public class DoorLogic : MonoBehaviour
     public Sprite doorOpen;
     public Sprite doorClosed;
 
-    private bool door_open = false;
+    private bool door_open = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +32,7 @@ public class DoorLogic : MonoBehaviour
     {
         if (!door_open)
         {
+            
             myAnim.SetBool("Door opening", true);
             StartCoroutine(stopOpening());
             door_open = true;
