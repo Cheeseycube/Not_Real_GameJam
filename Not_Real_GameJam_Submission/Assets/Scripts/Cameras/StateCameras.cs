@@ -8,6 +8,8 @@ public class StateCameras : MonoBehaviour
     Animator myAnim;
     private int CurrLevel = 0;
 
+    public GameObject playerObj;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +27,8 @@ public class StateCameras : MonoBehaviour
     {
         switch(CurrLevel)
         {
-            case 0:
-                Level0();
+            case 1:
+                Level1();
                 break;
 
             default:
@@ -34,11 +36,12 @@ public class StateCameras : MonoBehaviour
         }
     }
 
-    private void Level0()
+    private void Level1()
     {
-        Vector3 Playerpos = gameObject.transform.position;
-        if (Playerpos.x > 60)
+        Vector3 Playerpos = playerObj.transform.position;  // player bottom is actually the wide cam right now, and should only be used for a second or two
+        if (Playerpos.x > 60) // was 60
         {
+            print("cam move");
             myAnim.SetBool("Player bottom", true);
             myAnim.SetBool("Player top", false);
         }

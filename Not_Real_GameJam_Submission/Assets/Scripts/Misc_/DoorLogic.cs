@@ -10,8 +10,10 @@ public class DoorLogic : MonoBehaviour
 
     public Sprite doorOpen;
     public Sprite doorClosed;
+    public GameObject doorCanvas;
 
     private bool door_open = true;
+    private bool player_near_door = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +26,23 @@ public class DoorLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("e"))
+        if (player_near_door)
+        {
+            doorCanvas.SetActive(true);
+            print("active");
+            if (Input.GetKeyDown("e"))
+            {
+                DoorInteract();
+            }
+        }
+        else
+        {
+            doorCanvas.SetActive(false);
+        }
+        /*if (Input.GetKeyDown("e"))
         {
             DoorInteract();
-        }
+        }*/
     }
 
     public void DoorInteract()
@@ -51,6 +66,7 @@ public class DoorLogic : MonoBehaviour
         }
     }
 
+
     IEnumerator stopOpening()
     {
         yield return new WaitForSeconds(1f);
@@ -62,6 +78,23 @@ public class DoorLogic : MonoBehaviour
         yield return new WaitForSeconds(1f);
         myAnim.SetBool("Door closing", false);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player_near_door = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player_near_door = false;
+        }
+    }
+
 }
 
 

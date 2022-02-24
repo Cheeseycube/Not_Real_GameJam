@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     PolygonCollider2D BodyCollider;
     BoxCollider2D FeetCollider;
     SpriteRenderer spriteRenderer;
+    Animator myAnim;
 
     // Serialized Fields
     [SerializeField] float runSpeed = 5f;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
         BodyCollider = GetComponent<PolygonCollider2D>();
         FeetCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        myAnim = GetComponent<Animator>();
 
     }
 
@@ -40,6 +42,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         Jump();
+        if (Mathf.Abs(rb.velocity.x) > 0)
+        {
+            myAnim.SetBool("Player moving", true);
+        }
+        else
+        {
+            myAnim.SetBool("Player moving", false);
+        }
     }
 
     private void FixedUpdate()
