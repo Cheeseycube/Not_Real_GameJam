@@ -6,6 +6,7 @@ public class DoorLogic : MonoBehaviour
 {
     Animator myAnim;
     SpriteRenderer myRenderer;
+    BoxCollider2D doorCollider;
 
     public Sprite doorOpen;
     public Sprite doorClosed;
@@ -16,6 +17,7 @@ public class DoorLogic : MonoBehaviour
     {
         myAnim = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
+        doorCollider = GetComponent<BoxCollider2D>();
         myRenderer.sprite = doorOpen;
     }
 
@@ -36,6 +38,7 @@ public class DoorLogic : MonoBehaviour
             myAnim.SetBool("Door opening", true);
             StartCoroutine(stopOpening());
             door_open = true;
+            doorCollider.enabled = true;
             //myRenderer.sprite = doorOpen;
         }
         else
@@ -43,6 +46,7 @@ public class DoorLogic : MonoBehaviour
             myAnim.SetBool("Door closing", true);
             StartCoroutine(stopClosing());
             door_open = false;
+            doorCollider.enabled = false;
             //myRenderer.sprite = doorClosed;
         }
     }
