@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Jump();
-        if (Mathf.Abs(rb.velocity.x) > 0)
+        if (Mathf.Abs(rb.velocity.x) >= 4.9f)
         {
             myAnim.SetBool("Player moving", true);
         }

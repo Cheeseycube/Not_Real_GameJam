@@ -47,6 +47,7 @@ public class StateCameras : MonoBehaviour
         }
         else
         {
+            print("not good");
             myAnim.SetBool("Player top", true);
             myAnim.SetBool("Player bottom", false);
         }

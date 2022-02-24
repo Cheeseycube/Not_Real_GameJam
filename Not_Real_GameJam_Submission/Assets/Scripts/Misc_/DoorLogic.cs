@@ -29,7 +29,6 @@ public class DoorLogic : MonoBehaviour
         if (player_near_door)
         {
             doorCanvas.SetActive(true);
-            print("active");
             if (Input.GetKeyDown("e"))
             {
                 DoorInteract();
