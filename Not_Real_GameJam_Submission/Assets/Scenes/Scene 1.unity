@@ -99664,6 +99664,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5145906820357005076, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27192435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145906820357005076, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.060355574
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145906820357005078, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -0.23483378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145906820357005078, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
+      value: 0.11848003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145906820357005078, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
+      value: -0.38408092
+      objectReference: {fileID: 0}
     - target: {fileID: 5145906820357005079, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
       propertyPath: m_RootOrder
       value: 1
