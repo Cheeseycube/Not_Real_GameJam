@@ -12177,18 +12177,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Bird
       objectReference: {fileID: 0}
-    - target: {fileID: 4757297090697751216, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757297090697751216, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757297091571114086, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.09
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
 --- !u!1 &1569279244
