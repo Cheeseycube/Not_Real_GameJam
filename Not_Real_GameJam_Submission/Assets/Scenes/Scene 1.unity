@@ -13033,6 +13033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Lamp '
       objectReference: {fileID: 0}
+    - target: {fileID: 8584471765207041848, guid: d4cb675acf0cf3f44be5d6b2d5919826, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4cb675acf0cf3f44be5d6b2d5919826, type: 3}
 --- !u!1001 &1788059746
