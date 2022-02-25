@@ -97,9 +97,10 @@ public class DoorLogic : MonoBehaviour
 
    private void playerStuckChecker()
     {
-        if (door_open && ((playerObj.transform.position.x > 58) && (playerObj.transform.position.x < 60)))
+        if (door_open && /*((playerObj.transform.position.x > 58.5) &&*/ (playerObj.transform.position.x < 64) && (playerObj.transform.position.y < -3.8f))
         {
-            playerObj.transform.Translate(0, 1, 0);
+            playerObj.transform.Translate(0, 0.2f, 0);
+            print("launched player");
         }
     }
 

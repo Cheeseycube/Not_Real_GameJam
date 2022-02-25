@@ -72,11 +72,12 @@ public class Player : MonoBehaviour
 
         if (horizontalInput < 0)
         {
-            spriteRenderer.flipX = true;
+            //spriteRenderer.flipX = true;
+            gameObject.transform.localScale = new Vector2(-3, gameObject.transform.localScale.y);
         }
         else if (horizontalInput > 0)
         {
-            spriteRenderer.flipX = false;
+            gameObject.transform.localScale = new Vector2(3, gameObject.transform.localScale.y);
         }
     }
 
