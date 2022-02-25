@@ -943,6 +943,7 @@ MonoBehaviour:
   doorOpen: {fileID: 21300000, guid: a3187800ce1556e4fb2183343660ea2a, type: 3}
   doorClosed: {fileID: 21300000, guid: b899b733db3ed8448a81ab0c69716d0f, type: 3}
   doorCanvas: {fileID: 1814741944}
+  playerObj: {fileID: 346210767}
 --- !u!70 &689600379
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -94919,7 +94920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145906820357005079, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.21
+      value: 56.69
       objectReference: {fileID: 0}
     - target: {fileID: 5145906820357005079, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
       propertyPath: m_LocalPosition.y

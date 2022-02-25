@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorLogic : MonoBehaviour
 {
+
     Animator myAnim;
     SpriteRenderer myRenderer;
     BoxCollider2D doorCollider;
@@ -11,9 +12,11 @@ public class DoorLogic : MonoBehaviour
     public Sprite doorOpen;
     public Sprite doorClosed;
     public GameObject doorCanvas;
+    public GameObject playerObj;
 
     private bool door_open = true;
     private bool player_near_door = false;
+    private bool player_in_door = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,12 +41,10 @@ public class DoorLogic : MonoBehaviour
         {
             doorCanvas.SetActive(false);
         }
-        /*if (Input.GetKeyDown("e"))
-        {
-            DoorInteract();
-        }*/
+       playerStuckChecker();
     }
 
+    // All of the logic here does the opposite of what one would expect
     public void DoorInteract()
     {
         if (!door_open)
@@ -91,6 +92,14 @@ public class DoorLogic : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player_near_door = false;
+        }
+    }
+
+   private void playerStuckChecker()
+    {
+        if (door_open && ((playerObj.transform.position.x > 58) && (playerObj.transform.position.x < 60)))
+        {
+            playerObj.transform.Translate(0, 1, 0);
         }
     }
 

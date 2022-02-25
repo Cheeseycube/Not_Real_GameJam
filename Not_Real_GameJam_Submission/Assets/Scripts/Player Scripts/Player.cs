@@ -44,11 +44,13 @@ public class Player : MonoBehaviour
         Jump();
         if (Mathf.Abs(rb.velocity.x) >= 4.9f)
         {
+            myAnim.enabled = true;
             myAnim.SetBool("Player moving", true);
         }
         else
         {
             myAnim.SetBool("Player moving", false);
+            myAnim.enabled = false;
         }
     }
 
