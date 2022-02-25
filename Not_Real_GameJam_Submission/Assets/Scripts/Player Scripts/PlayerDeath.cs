@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    private int CurrLevel = 0;
 
-
+    private void Awake()
+    {
+        CurrLevel = SceneManager.GetActiveScene().buildIndex;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +28,24 @@ public class PlayerDeath : MonoBehaviour
 
     private void Die()
     {
-        // put death logic here
-        // use a co routine so it is not instant
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        switch (CurrLevel)
+        {
+            case 1:
+                Level1();
+                break;
+
+            default:
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Player.health = 100f;
+                Player.PlayerDead = false;
+                break;
+        }
+
+    }
+
+    private void Level1()
+    {
+        SceneManager.LoadScene(2);
         Player.health = 100f;
         Player.PlayerDead = false;
     }

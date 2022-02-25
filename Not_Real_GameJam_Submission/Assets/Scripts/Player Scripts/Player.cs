@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     // booleans
     public static bool PlayerDead = false;
+    public static bool Paused = false;
     private bool isJumping = false;
     //private bool isFlipped = false;
 
@@ -61,8 +62,9 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        if (PlayerDead)
+        if (PlayerDead || Paused)
         {
+            rb.velocity = Vector2.zero;
             return;
         }
         float horizontalInput = Input.GetAxisRaw("Horizontal"); // value between -1 and +1
@@ -80,7 +82,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (PlayerDead)
+        if (PlayerDead || Paused)
         {
             return;
         }

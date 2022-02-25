@@ -34,6 +34,10 @@ public class StateCameras : MonoBehaviour
                 Level1();
                 break;
 
+            case 2:
+                Level1_5();
+                break;
+
             default:
                 break;
         }
@@ -48,10 +52,8 @@ public class StateCameras : MonoBehaviour
             myAnim.SetBool("First stairs", true);
             myAnim.SetBool("Player top", false);
             myAnim.SetBool("Player on stairs", false);
-            onStairs = true;
-        }
-        else if (Playerpos.x > 60 && onStairs)
-        {
+            //onStairs = true;
+            Player.Paused = true;
             if (may_play_cliff_sound)
             {
                 StartCoroutine(DelayScreech());
@@ -59,22 +61,58 @@ public class StateCameras : MonoBehaviour
             }
             StartCoroutine(CameraSwap());
         }
-        else
+        else if (Playerpos.x > 60 && onStairs && (Playerpos.x <= 70))
+        {
+            myAnim.SetBool("First stairs", false);
+            myAnim.SetBool("Player top", false);
+            myAnim.SetBool("Player on stairs", true);
+            myAnim.SetBool("Stairs2", false);
+        }
+        else if (Playerpos.x < 60)
         {
             myAnim.SetBool("Player top", true);
             myAnim.SetBool("Player on stairs", false);
             myAnim.SetBool("First stairs", false);
         }
-        
+        else if (Playerpos.x > 70)
+        {
+            myAnim.SetBool("Player top", false);
+            myAnim.SetBool("Player on stairs", false);
+            myAnim.SetBool("First stairs", false);
+            myAnim.SetBool("Stairs2", true);
+        }
+         
+    }
+
+    private void Level1_5()
+    {
+        Vector3 Playerpos = playerObj.transform.position;
+        if ((Playerpos.x > 58) && Playerpos.x <= 70)
+        {
+            myAnim.SetBool("Player on stairs", true);
+            myAnim.SetBool("Player top", false);
+        }
+        else if (Playerpos.x > 70)
+        {
+            myAnim.SetBool("Player on stairs", false);
+            myAnim.SetBool("Stairs2", true);
+        }
+        else
+        {
+            myAnim.SetBool("Player on stairs", false);
+            myAnim.SetBool("Player top", true);
+        }
     }
 
     IEnumerator CameraSwap()
     {
         // may pause game here or something
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(2.5f);
         myAnim.SetBool("Player top", false);
         myAnim.SetBool("First stairs", false);
         myAnim.SetBool("Player on stairs", true);
+        Player.Paused = false;
+        onStairs = true;
     }
 
     IEnumerator DelayScreech()
