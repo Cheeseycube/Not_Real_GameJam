@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CutscenePlayer : MonoBehaviour
 {
     Rigidbody2D rb;
     public GameObject speechBubble;
+    public GameObject Text1;
+    public GameObject Text2;
 
     private float timer;
     private bool isWalking = false;
@@ -34,7 +37,7 @@ public class CutscenePlayer : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, 0f);
             speechBubble.SetActive(true);
-
+            StartCoroutine(ChangeText());
         }
     }
 
@@ -46,5 +49,19 @@ public class CutscenePlayer : MonoBehaviour
             rb.velocity = new Vector2(3.5f, 0f);
             isWalking = true;
         }
+    }
+
+    IEnumerator ChangeText()
+    {
+        yield return new WaitForSeconds(2f);
+        Text1.SetActive(false);
+        Text2.SetActive(true);
+        StartCoroutine(LoadNextLevel());
+    }
+
+    IEnumerator LoadNextLevel()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(3);
     }
 }

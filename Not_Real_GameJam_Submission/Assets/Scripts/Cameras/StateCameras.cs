@@ -54,6 +54,7 @@ public class StateCameras : MonoBehaviour
             myAnim.SetBool("Player on stairs", false);
             //onStairs = true;
             Player.Paused = true;
+            PlayerSpeech2.maydisplay = true;
             if (may_play_cliff_sound)
             {
                 StartCoroutine(DelayScreech());
