@@ -7,8 +7,11 @@ public class StateCameras : MonoBehaviour
 {
     Animator myAnim;
     private int CurrLevel = 0;
+    private bool onStairs = false;
+    private bool may_play_cliff_sound = true;
 
     public GameObject playerObj;
+
 
 
     // Start is called before the first frame update
@@ -38,18 +41,45 @@ public class StateCameras : MonoBehaviour
 
     private void Level1()
     {
-        Vector3 Playerpos = playerObj.transform.position;  // player bottom is actually the wide cam right now, and should only be used for a second or two
-        if (Playerpos.x > 60) // was 60
+        Vector3 Playerpos = playerObj.transform.position;
+
+        if (Playerpos.x > 60 && !onStairs)
         {
-            print("cam move");
-            myAnim.SetBool("Player bottom", true);
+            myAnim.SetBool("First stairs", true);
             myAnim.SetBool("Player top", false);
+            myAnim.SetBool("Player on stairs", false);
+            onStairs = true;
+        }
+        else if (Playerpos.x > 60 && onStairs)
+        {
+            if (may_play_cliff_sound)
+            {
+                StartCoroutine(DelayScreech());
+                may_play_cliff_sound = false;
+            }
+            StartCoroutine(CameraSwap());
         }
         else
         {
-            print("not good");
             myAnim.SetBool("Player top", true);
-            myAnim.SetBool("Player bottom", false);
+            myAnim.SetBool("Player on stairs", false);
+            myAnim.SetBool("First stairs", false);
         }
+        
+    }
+
+    IEnumerator CameraSwap()
+    {
+        // may pause game here or something
+        yield return new WaitForSecondsRealtime(3f);
+        myAnim.SetBool("Player top", false);
+        myAnim.SetBool("First stairs", false);
+        myAnim.SetBool("Player on stairs", true);
+    }
+
+    IEnumerator DelayScreech()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        FindObjectOfType<BirdSounds>().PlayCliffAudio();
     }
 }
