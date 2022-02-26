@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        HazardDetection();
         if (Input.GetKeyDown("r"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -133,6 +134,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void HazardDetection()
+    {
+        if (BodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) || FeetCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+        {
+            TakeDamage(100f);
+        }
+    }
     public void TakeDamage(float damageDealt)
     {
         health -= damageDealt;

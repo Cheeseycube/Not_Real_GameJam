@@ -21,7 +21,8 @@ public class EnemyMotion_Pace : MonoBehaviour
         if (Vector2.Distance(waypoints[currWaypointIndex].transform.position, transform.position) < .1f)
         {
             ++currWaypointIndex;
-            myRenderer.flipX = !myRenderer.flipX;
+            //myRenderer.flipX = !myRenderer.flipX;
+            gameObject.transform.localScale = new Vector2(-gameObject.transform.localScale.x, gameObject.transform.localScale.y);
             if (currWaypointIndex >= waypoints.Length)
             {
                 currWaypointIndex = 0;
