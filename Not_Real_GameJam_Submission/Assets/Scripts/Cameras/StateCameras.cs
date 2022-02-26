@@ -89,10 +89,17 @@ public class StateCameras : MonoBehaviour
             myAnim.SetBool("Stairs4", false);
             myAnim.SetBool("Stairs3", true);
         }
-        else  if (Playerpos.x >= 116)
+        else  if ((Playerpos.x >= 116) && Playerpos.x < 138.68f)
         {
             myAnim.SetBool("Stairs3", false);
+            myAnim.SetBool("Stairs5", false);
             myAnim.SetBool("Stairs4", true);
+        }
+
+        else if (Playerpos.x >= 138.68f)
+        {
+            myAnim.SetBool("Stairs4", false);
+            myAnim.SetBool("Stairs5", true);
         }
          
     }
@@ -117,10 +124,16 @@ public class StateCameras : MonoBehaviour
             myAnim.SetBool("Stairs3", true);
             myAnim.SetBool("Stairs4", false);
         }
-        else if (Playerpos.x >= 116)
+        else if ((Playerpos.x >= 116) && Playerpos.x < 136.68f)
         {
             myAnim.SetBool("Stairs3", false);
             myAnim.SetBool("Stairs4", true);
+            myAnim.SetBool("Stairs5", false);
+        }
+        else if (Playerpos.x >= 136.68f)
+        {
+            myAnim.SetBool("Stairs4", false);
+            myAnim.SetBool("Stairs5", true);
         }
         else
         {
