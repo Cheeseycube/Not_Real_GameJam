@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
 
     public void DeathKick()
     {
-        rb.velocity = new Vector2(0f, 50f);
+        rb.velocity = new Vector2(0f, 40f);
     }
     private void Run()
     {
