@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageLight: {fileID: 509598588}
   runSpeed: 5
-  jumpSpeed: 11
+  jumpSpeed: 15
   heldjumpSpeed: 5
 --- !u!61 &5145906820357005076
 BoxCollider2D:

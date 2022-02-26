@@ -593,18 +593,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5145906820357005162, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
   m_PrefabInstance: {fileID: 5145906820595196375}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &346210776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346210767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f751a299407a34b46ae561cfc10a396b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &355439029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,13 +1133,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Bird (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4757297090697751217, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757297090697751217, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
+      propertyPath: m_TagString
+      value: Bird
+      objectReference: {fileID: 0}
     - target: {fileID: 4757297091571114086, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.62
       objectReference: {fileID: 0}
+    - target: {fileID: 4757297091571114087, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4757297091599099638, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757297091599099639, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 885750fcd9098064f8d1622470dae7a5, type: 3}
@@ -110838,10 +110842,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5145906820357005077, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
-      propertyPath: jumpSpeed
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 5145906820357005079, guid: 2061fce90aadfb04f912abea164a9e39, type: 3}
       propertyPath: m_RootOrder
       value: 2

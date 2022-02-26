@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         damageLight.SetActive(isDamaged);
     }
 
-    public void DeathKick()
+    public void DamageKick()
     {
         rb.velocity = new Vector2(0f, 40f);
     }
@@ -147,6 +147,19 @@ public class Player : MonoBehaviour
         if (health <= 0f)
         {
             PlayerDead = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bird"))
+        {
+            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Birds")))
+            {
+                TakeDamage(25f);
+                DamageKick();
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
