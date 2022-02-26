@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     BoxCollider2D FeetCollider;
     SpriteRenderer spriteRenderer;
     Animator myAnim;
+    public GameObject damageLight;
 
     // Serialized Fields
     [SerializeField] float runSpeed = 5f;
@@ -65,6 +66,15 @@ public class Player : MonoBehaviour
         Run();
     }
 
+    public void DamageIndicator(bool isDamaged)
+    {
+        damageLight.SetActive(isDamaged);
+    }
+
+    public void DeathKick()
+    {
+        rb.velocity = new Vector2(0f, 50f);
+    }
     private void Run()
     {
         if (PlayerDead || Paused)

@@ -25,7 +25,7 @@ public class PlayerSpeech2 : MonoBehaviour
 
     IEnumerator SpeechWait()
     {
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(5f);
         speechBubble2.SetActive(true);
         StartCoroutine(SpeechClose());
     }

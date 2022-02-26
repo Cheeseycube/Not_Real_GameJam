@@ -94,7 +94,7 @@ public class StateCameras : MonoBehaviour
     private void Level1_5()
     {
         Vector3 Playerpos = playerObj.transform.position;
-        if ((Playerpos.x > 58) && Playerpos.x <= 70)
+        if ((Playerpos.x > 60) && Playerpos.x <= 70)
         {
             myAnim.SetBool("Player on stairs", true);
             myAnim.SetBool("Player top", false);

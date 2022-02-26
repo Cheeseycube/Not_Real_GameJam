@@ -28,6 +28,15 @@ public class EnemyMotion_Pace : MonoBehaviour
             }
         }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currWaypointIndex].transform.position, Time.deltaTime * speed);
-        //myRenderer.flipX = !myRenderer.flipX;
+    }
+
+    public void changeDirection()
+    {
+        ++currWaypointIndex;
+        myRenderer.flipX = !myRenderer.flipX;
+        if (currWaypointIndex >= waypoints.Length)
+        {
+            currWaypointIndex = 0;
+        }
     }
 }

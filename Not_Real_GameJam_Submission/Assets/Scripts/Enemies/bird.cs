@@ -29,6 +29,9 @@ public class bird : MonoBehaviour
         if (birdCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && CanDamage)
         {
             FindObjectOfType<Player>().TakeDamage(25f);
+            FindObjectOfType<Player>().DeathKick();
+            FindObjectOfType<EnemyMotion_Pace>().changeDirection();
+            StartCoroutine(StartDamageIndication());
             CanDamage = false;
         }
 
@@ -36,6 +39,13 @@ public class bird : MonoBehaviour
         {
             CanDamage = true;
         }
+    }
+
+    IEnumerator StartDamageIndication()
+    {
+        FindObjectOfType<Player>().DamageIndicator(true);
+        yield return new WaitForSeconds(0.5f);
+        FindObjectOfType<Player>().DamageIndicator(false);
     }
 }
 
