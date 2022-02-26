@@ -8,6 +8,9 @@ public class TopDownPlayer : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     [SerializeField] float movementSpeed = 5f;
+    [SerializeField] public static float health = 100f;
+    public static bool PlayerDead = false;
+    public GameObject damageLight;
 
     // Start is called before the first frame update
     void Start()
@@ -47,5 +50,21 @@ public class TopDownPlayer : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(rb.velocity.x) * 2f, 2f); // was 1f
         }
 
+    }
+    public void TakeDamage(float damageDealt)
+    {
+        health -= damageDealt;
+        if (health <= 0f)
+        {
+            PlayerDead = true;
+        }
+    }
+    public void DamageKick()
+    {
+        rb.velocity = new Vector2(0f, 30f);
+    }
+    public void DamageIndicator(bool isDamaged)
+    {
+        damageLight.SetActive(isDamaged);
     }
 }
