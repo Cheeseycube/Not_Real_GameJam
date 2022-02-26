@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        /*if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             attacking = true;
             if (mayAttack)
@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
                 StartCoroutine(AttackWait());
                 mayAttack = false;
             }
-        }
+        }*/
     }
 
     IEnumerator Attack()

@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
 
     public void DamageKick()
     {
-        rb.velocity = new Vector2(0f, 40f);
+        rb.velocity = new Vector2(0f, 30f);
     }
     private void Run()
     {
@@ -154,9 +154,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bird"))
         {
-            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Birds")))
+            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Birds")) )
             {
-                TakeDamage(25f);
+                //TakeDamage(25f);
                 DamageKick();
                 Destroy(collision.gameObject);
             }
