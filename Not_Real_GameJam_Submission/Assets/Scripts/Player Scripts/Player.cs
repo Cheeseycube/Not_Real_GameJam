@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         Jump();
-        if (Mathf.Abs(rb.velocity.x) >= 4.9f)
+        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) || PlayerAttack.attacking)
         {
             myAnim.enabled = true;
             myAnim.SetBool("Player moving", true);
