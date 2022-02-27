@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    private float speed = 10f;
+    private float speed = 10; // was 10
     public GameObject WayPoint;
     public Vector3 startPos;
     // Start is called before the first frame update
@@ -25,6 +25,7 @@ public class CarMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, WayPoint.transform.position, Time.deltaTime * speed);
         if (transform.position == WayPoint.transform.position)
         {
+            speed = Random.Range(10, 15);
             transform.position = startPos;
         }
     }

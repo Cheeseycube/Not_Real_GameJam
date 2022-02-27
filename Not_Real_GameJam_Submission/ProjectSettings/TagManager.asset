@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AudioListener
   - Bird
+  - Slow
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Player
   - Hazards
   - Birds
-  - 
+  - Slow
   - 
   - 
   - 
@@ -42,6 +43,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Normal Tar
+    uniqueID: 3423941487
+    locked: 0
+  - name: Player Slow
+    uniqueID: 3493204639
+    locked: 0
+  - name: Slow Tar
+    uniqueID: 1491032939
     locked: 0
   - name: Background
     uniqueID: 2233318967

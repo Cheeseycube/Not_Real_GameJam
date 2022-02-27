@@ -25,7 +25,6 @@ public class Car_Collision : MonoBehaviour
     {
         if (carCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && CanDamage)
         {
-            print("how many");
             FindObjectOfType<TopDownPlayer>().TakeDamage(100f);
             FindObjectOfType<TopDownPlayer>().DamageKick();
             FindObjectOfType<TopDownPlayer>().StartCoroutine(StartDamageIndication());
