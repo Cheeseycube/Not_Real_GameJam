@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    private float speed = 10f;
     public GameObject WayPoint;
     public Vector3 startPos;
     // Start is called before the first frame update
