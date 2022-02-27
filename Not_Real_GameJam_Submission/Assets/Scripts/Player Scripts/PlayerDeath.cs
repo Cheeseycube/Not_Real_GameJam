@@ -34,6 +34,10 @@ public class PlayerDeath : MonoBehaviour
                 Level1();
                 break;
 
+            case 5:
+                BossLevel();
+                break;
+
             default:
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 Player.health = 100f;
@@ -48,5 +52,13 @@ public class PlayerDeath : MonoBehaviour
         SceneManager.LoadScene(2);
         Player.health = 100f;
         Player.PlayerDead = false;
+    }
+
+    private void BossLevel()
+    {
+        SceneManager.LoadScene(5);
+        Player.health = 100f;
+        Player.PlayerDead = false;
+        GameSession.firstBossFight = false;
     }
 }

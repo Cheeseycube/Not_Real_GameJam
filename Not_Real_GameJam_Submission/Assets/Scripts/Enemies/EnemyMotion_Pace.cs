@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMotion_Pace : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class EnemyMotion_Pace : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        /*if ((SceneManager.GetActiveScene().buildIndex == 5) && !PlayerSpeech2.FightStarted && GameSession.firstBossFight)
+        {
+            return;
+        }*/
         if (Vector2.Distance(waypoints[currWaypointIndex].transform.position, transform.position) < .1f)
         {
             ++currWaypointIndex;

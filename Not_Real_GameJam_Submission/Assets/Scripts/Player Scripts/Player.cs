@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     // floats
     float mayJump = 0.1f;
     float timer;
+    float dashTimer;
     [SerializeField] public static float health = 100f;
 
     // integers
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour
     public static bool PlayerDead = false;
     public static bool Paused = false;
     private bool isJumping = false;
+    private bool mayDash = true;
+    private bool mayDamage = true;
     //private bool isFlipped = false;
 
     void Start()
@@ -44,6 +47,23 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            if (transform.position.y < -2.8f)
+            {
+                transform.Translate(0, 0.2f, 0);
+            }
+            if (Input.GetKeyDown(KeyCode.LeftShift) && mayDash)
+            {
+                transform.Translate(rb.velocity.x, 0, 0);
+                dashTimer = Time.time;
+                mayDash = false;
+            }
+            if (Time.time - dashTimer >= 1f)
+            {
+                mayDash = true;
+            }
+        }
         HazardDetection();
         if (Input.GetKeyDown("r"))
         {
@@ -160,6 +180,30 @@ public class Player : MonoBehaviour
                 DamageKick();
                 Destroy(collision.gameObject);
             }
+        }
+
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Boss")))
+            {
+                if (mayDamage)
+                {
+                    health += 25;
+                    FindObjectOfType<BossLogic>().DamageBoss();
+                    DamageKick();
+                    mayDamage = false;
+                }
+
+                //Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            mayDamage = true;
         }
     }
 }

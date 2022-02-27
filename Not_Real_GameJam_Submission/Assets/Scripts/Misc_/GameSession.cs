@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
-
+    public static bool firstBossFight = true;
+    public static bool bossDead = false;
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -27,6 +29,10 @@ public class GameSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (bossDead)
+        {
+            SceneManager.LoadScene(6);
+        }
         
     }
 }

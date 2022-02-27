@@ -38,6 +38,10 @@ public class StateCameras : MonoBehaviour
                 Level1_5();
                 break;
 
+            case 5:
+                BossLevel();
+                break;
+
             default:
                 break;
         }
@@ -139,6 +143,22 @@ public class StateCameras : MonoBehaviour
         {
             myAnim.SetBool("Player on stairs", false);
             myAnim.SetBool("Player top", true);
+        }
+    }
+
+    private void BossLevel()
+    {
+        if (GameSession.firstBossFight)
+        {
+            myAnim.SetBool("Player talking", PlayerSpeech.PlayerTalking);
+            myAnim.SetBool("Boss talking", PlayerSpeech2.BossTalking);
+            myAnim.SetBool("Fight Started", PlayerSpeech2.FightStarted);
+        }
+        else
+        {
+            myAnim.SetBool("Player talking", false);
+            myAnim.SetBool("Boss talking", false);
+            myAnim.SetBool("Fight Started", true);
         }
     }
 

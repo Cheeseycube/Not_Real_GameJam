@@ -7,17 +7,39 @@ public class PlayerSpeech : MonoBehaviour
 {
     public GameObject speechBubble1;
 
-    private int CurrLevel = 0;
+    private int CurrScene = 0;
+    public static bool PlayerTalking = false;
 
     private void Awake()
     {
-        CurrLevel = SceneManager.GetActiveScene().buildIndex;
+        CurrScene = SceneManager.GetActiveScene().buildIndex;
     }
     // Start is called before the first frame update
     void Start()
     {
         speechBubble1.SetActive(false);
-        StartCoroutine(SpeechWait());
+        switch (CurrScene) {
+            case 1:
+                StartCoroutine(SpeechWait1());
+                break;
+
+            case 3:
+                StartCoroutine(SpeechWait1());
+                break;
+            case 5:
+                if (GameSession.firstBossFight)
+                {
+                    StartCoroutine(SpeechWait2());
+                }
+                else
+                {
+                    break;
+                }
+                break;
+
+            default:
+                break;
+        }
         
     }
 
@@ -26,19 +48,34 @@ public class PlayerSpeech : MonoBehaviour
     {
     }
 
-   IEnumerator SpeechWait()
+   IEnumerator SpeechWait1()
     {
         yield return new WaitForSecondsRealtime(1f);
         speechBubble1.SetActive(true);
-        StartCoroutine(SpeechClose());
+        StartCoroutine(SpeechClose1());
     }
 
-    IEnumerator SpeechClose()
+    IEnumerator SpeechClose1()
     {
         yield return new WaitForSecondsRealtime(4f);
         speechBubble1.SetActive(false);
     }
 
-    
+    IEnumerator SpeechWait2()
+    {
+        Player.Paused = true;
+        yield return new WaitForSecondsRealtime(3f);
+        PlayerTalking = true;
+        speechBubble1.SetActive(true);
+        StartCoroutine(SpeechClose2());
+    }
+
+    IEnumerator SpeechClose2()
+    {
+        yield return new WaitForSecondsRealtime(4f);
+        PlayerTalking = false;
+        speechBubble1.SetActive(false);
+        PlayerSpeech2.maydisplay = true;
+    }
 
 }

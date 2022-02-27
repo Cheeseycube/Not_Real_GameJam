@@ -28,7 +28,6 @@ public class bird : MonoBehaviour
     {
         if (birdCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && CanDamage)
         {
-            print("how many");
             FindObjectOfType<Player>().TakeDamage(25f);
             FindObjectOfType<Player>().DamageKick();
             FindObjectOfType<EnemyMotion_Pace>().changeDirection();
