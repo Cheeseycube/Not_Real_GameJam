@@ -38,6 +38,7 @@ public class TopDownPlayerDeath : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 TopDownPlayer.health = 100f;
                 TopDownPlayer.PlayerDead = false;
+                TopDownPlayer.slowed = false;
                 break;
         }
 

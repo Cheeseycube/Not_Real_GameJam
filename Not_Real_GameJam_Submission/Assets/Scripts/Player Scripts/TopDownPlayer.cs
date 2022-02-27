@@ -23,6 +23,7 @@ public class TopDownPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(slowed);
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
