@@ -28,6 +28,7 @@ public class BossLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print(bossHealth);
         /*if (playerMovement.velocity.x < 0)
         {
             rb.velocity = new Vector2(speed * -1, 0);

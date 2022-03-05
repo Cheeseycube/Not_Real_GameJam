@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     private bool isJumping = false;
     private bool mayDash = true;
     private bool mayDamage = true;
+    private bool maybossDamage = true;
     //private bool isFlipped = false;
 
     void Start()
@@ -65,12 +66,13 @@ public class Player : MonoBehaviour
             }
         }
         HazardDetection();
+        DamagePlayerBoss();
         if (Input.GetKeyDown("r"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         Jump();
-        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) || PlayerAttack.attacking)
+        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) /*|| PlayerAttack.attacking*/)
         {
             myAnim.enabled = true;
             myAnim.SetBool("Player moving", true);
@@ -184,7 +186,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Boss"))
         {
-            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Boss")))
+            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Boss Hitpoint")))
             {
                 if (mayDamage)
                 {
@@ -205,5 +207,28 @@ public class Player : MonoBehaviour
         {
             mayDamage = true;
         }
+    }
+
+    private void DamagePlayerBoss()
+    {
+        if (BodyCollider.IsTouchingLayers(LayerMask.GetMask("Boss")) && maybossDamage)
+        {
+            TakeDamage(25f);
+            DamageKick();
+            StartCoroutine(StartDamageIndication());
+            maybossDamage = false;
+        }
+
+        if (!BodyCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+        {
+            maybossDamage = true;
+        }
+    }
+
+    IEnumerator StartDamageIndication()
+    {
+        DamageIndicator(true);
+        yield return new WaitForSeconds(0.5f);
+        DamageIndicator(false);
     }
 }

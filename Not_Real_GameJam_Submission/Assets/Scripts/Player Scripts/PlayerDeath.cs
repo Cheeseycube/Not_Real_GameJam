@@ -56,8 +56,10 @@ public class PlayerDeath : MonoBehaviour
 
     private void BossLevel()
     {
+        //print("dead");
         SceneManager.LoadScene(5);
         Player.health = 100f;
+        BossLogic.bossHealth = 100f;
         Player.PlayerDead = false;
         GameSession.firstBossFight = false;
     }
