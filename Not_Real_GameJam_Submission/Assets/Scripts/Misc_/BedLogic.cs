@@ -32,7 +32,7 @@ public class BedLogic : MonoBehaviour
 
     private void bedInteract()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

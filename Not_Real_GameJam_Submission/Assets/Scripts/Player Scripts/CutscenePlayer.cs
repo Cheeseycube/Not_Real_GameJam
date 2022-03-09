@@ -62,6 +62,6 @@ public class CutscenePlayer : MonoBehaviour
     IEnumerator LoadNextLevel()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
     }
 }

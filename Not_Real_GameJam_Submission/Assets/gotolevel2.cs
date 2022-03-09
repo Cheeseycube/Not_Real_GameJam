@@ -21,7 +21,7 @@ public class gotolevel2 : MonoBehaviour
     {
         if  (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(4);
         }
     }
 }

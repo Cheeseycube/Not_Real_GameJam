@@ -30,11 +30,11 @@ public class StateCameras : MonoBehaviour
     {
         switch(CurrLevel)
         {
-            case 1:
+            case 2:
                 Level1();
                 break;
 
-            case 2:
+            case 3:
                 Level1_5();
                 break;
 
