@@ -52,8 +52,11 @@ public class BackgroundMusic : MonoBehaviour
         {
             myAudio.clip = bossTheme;
             print("boss time!");
-            myAudio.Play();
-            mayplay = false;
+            if (PlayerSpeech2.FightStarted)
+            {
+                myAudio.Play();
+                mayplay = false;
+            }
         }
     }
 }
