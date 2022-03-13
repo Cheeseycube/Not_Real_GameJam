@@ -64,7 +64,7 @@ public class PlayerSpeech : MonoBehaviour
     IEnumerator SpeechWait2()
     {
         Player.Paused = true;
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(2f);
         PlayerTalking = true;
         speechBubble1.SetActive(true);
         StartCoroutine(SpeechClose2());
@@ -72,7 +72,7 @@ public class PlayerSpeech : MonoBehaviour
 
     IEnumerator SpeechClose2()
     {
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(3f);
         PlayerTalking = false;
         speechBubble1.SetActive(false);
         PlayerSpeech2.maydisplay = true;

@@ -83,7 +83,7 @@ public class PlayerSpeech2 : MonoBehaviour
 
     IEnumerator SpeechClose2()
     {
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(3f);
         FindObjectOfType<FightCanvas>().DisplayText();
        // FindObjectOfType<Mushroom>().Spawn();
         BossTalking = false;

@@ -51,7 +51,7 @@ public class BackgroundMusic : MonoBehaviour
         if ((SceneManager.GetActiveScene().buildIndex == 5) && mayplay)
         {
             myAudio.clip = bossTheme;
-            print("boss time!");
+            //print("boss time!");
             if (PlayerSpeech2.FightStarted)
             {
                 myAudio.Play();
