@@ -14,6 +14,9 @@ public class Fighting_Player : MonoBehaviour
     private bool PlayerDead = false;
     private bool Paused = false;
     private bool isJumping = false;
+    private bool attacking = false;
+    private bool mayAttack = true;
+    private bool attack_ending = false;
 
     // floats and ints
     [SerializeField] float runSpeed = 5f;
@@ -38,8 +41,9 @@ public class Fighting_Player : MonoBehaviour
         {
             transform.Translate(0, 0.2f, 0);
         }
-        RunAnimation();
+        Animations();
         Jump();
+        BasicAttack();
     }
 
     private void FixedUpdate()
@@ -106,17 +110,67 @@ public class Fighting_Player : MonoBehaviour
         }
     }
 
-    private void RunAnimation()
+     // fighting animation ideas: basically when the attack button is pressed, is attacking becomes true, and while attacking the run animation is not allowed
+     // when the attack button is pressed, first set walking to false in animator and set attacking to true in animator
+     // then after like 0.5 seconds or so set attack to false and walking to true and turn off the animator
+    private void Animations()
     {
-        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) /*|| PlayerAttack.attacking*/)
+        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) && !attacking)
         {
             myAnim.enabled = true;
             myAnim.SetBool("Player moving", true);
+            myAnim.SetBool("Player attacking", false);
+        }
+        else if (attacking)
+        {
+            myAnim.SetBool("Player moving", false);
+            myAnim.SetBool("Player attacking", true);
+            myAnim.enabled = true;
+        }
+        else if (attack_ending)
+        {
+            //print("attack ending");
+            myAnim.SetBool("Player moving", true);
+            myAnim.SetBool("Player attacking", false);
+            myAnim.enabled = true;
         }
         else
         {
             myAnim.SetBool("Player moving", false);
+            myAnim.SetBool("Player attacking", false);
             myAnim.enabled = false;
         }
+    }
+
+    // what we need is to add in a little walk animation after the attack, that is considered part of the attack animation as a whole
+    private void BasicAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && mayAttack)
+        {
+            mayAttack = false;
+            attacking = true;
+            StartCoroutine(AttackRepeatTimer());
+            StartCoroutine(AttackTimer());
+        }
+    }
+
+    IEnumerator AttackRepeatTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        mayAttack = true;
+    }
+
+    IEnumerator AttackTimer()
+    {
+        yield return new WaitForSeconds(0.2f);
+        attacking = false;
+        StartCoroutine(AttackWalk());
+    }
+
+    IEnumerator AttackWalk()
+    {
+        attack_ending = true;
+        yield return new WaitForSeconds(0.3f);
+        attack_ending = false;
     }
 }
