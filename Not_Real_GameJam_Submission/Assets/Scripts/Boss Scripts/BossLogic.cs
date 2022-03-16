@@ -42,7 +42,7 @@ public class BossLogic : MonoBehaviour
             Move();
             Attack();
         }
-        DamagePlayer();
+       // DamagePlayer();
     }
 
     private void Attack()
@@ -94,7 +94,7 @@ public class BossLogic : MonoBehaviour
     public void DamageBoss()
     {
         bossHealth -= 25f;
-        if (bossHealth < 0)
+        if (bossHealth <= 0)
         {
             GameSession.bossDead = true;
             Destroy(gameObject);

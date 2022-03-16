@@ -14,7 +14,7 @@ public class Fighting_Player : MonoBehaviour
     private bool PlayerDead = false;
     private bool Paused = false;
     private bool isJumping = false;
-    private bool attacking = false;
+    public static bool Basic_attacking = false;
     private bool mayAttack = true;
     private bool attack_ending = false;
 
@@ -115,13 +115,13 @@ public class Fighting_Player : MonoBehaviour
      // then after like 0.5 seconds or so set attack to false and walking to true and turn off the animator
     private void Animations()
     {
-        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) && !attacking)
+        if ((Mathf.Abs(rb.velocity.x) >= 4.9f) && !Basic_attacking)
         {
             myAnim.enabled = true;
             myAnim.SetBool("Player moving", true);
             myAnim.SetBool("Player attacking", false);
         }
-        else if (attacking)
+        else if (Basic_attacking)
         {
             myAnim.SetBool("Player moving", false);
             myAnim.SetBool("Player attacking", true);
@@ -148,7 +148,7 @@ public class Fighting_Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && mayAttack)
         {
             mayAttack = false;
-            attacking = true;
+            Basic_attacking = true;
             StartCoroutine(AttackRepeatTimer());
             StartCoroutine(AttackTimer());
         }
@@ -163,7 +163,7 @@ public class Fighting_Player : MonoBehaviour
     IEnumerator AttackTimer()
     {
         yield return new WaitForSeconds(0.2f);
-        attacking = false;
+        Basic_attacking = false;
         StartCoroutine(AttackWalk());
     }
 
