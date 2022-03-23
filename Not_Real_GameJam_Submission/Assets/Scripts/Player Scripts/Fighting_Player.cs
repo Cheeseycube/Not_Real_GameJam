@@ -113,6 +113,8 @@ public class Fighting_Player : MonoBehaviour
      // fighting animation ideas: basically when the attack button is pressed, is attacking becomes true, and while attacking the run animation is not allowed
      // when the attack button is pressed, first set walking to false in animator and set attacking to true in animator
      // then after like 0.5 seconds or so set attack to false and walking to true and turn off the animator
+
+    // new attack ideas: how about we just change the player's sprite to the final frame of the attack.  Also turn off the animator when attacking.  Turn the animator back on after the attack is done?
     private void Animations()
     {
         if ((Mathf.Abs(rb.velocity.x) >= 4.9f) && !Basic_attacking)
@@ -156,7 +158,7 @@ public class Fighting_Player : MonoBehaviour
 
     IEnumerator AttackRepeatTimer()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);  // originally 1f, probably can't be less than 0.2f
         mayAttack = true;
     }
 
