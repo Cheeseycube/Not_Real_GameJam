@@ -39,7 +39,7 @@ public class BossLogic : MonoBehaviour
         }*/
         if (PlayerSpeech2.FightStarted)
         {
-            Move();
+            //Move();
             Attack();
         }
        // DamagePlayer();
@@ -48,10 +48,17 @@ public class BossLogic : MonoBehaviour
     private void Attack()
     {
         //timer = 0;
-        if (Time.time - timer > 2f)
+        /*if (Time.time - timer > 2f)
         {
             rb.velocity = new Vector2(rb.velocity.x, 30f);
             timer = Time.time;
+        }*/
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            print("atttaaaaaaaack");
+            myAnim.SetBool("BossAttacking", true);
+            StartCoroutine(AttackTimer());
         }
         /*if ((transform.position.x - playerObj.transform.position.x < 10))
         {
@@ -106,6 +113,12 @@ public class BossLogic : MonoBehaviour
         FindObjectOfType<Player>().DamageIndicator(true);
         yield return new WaitForSeconds(0.5f);
         FindObjectOfType<Player>().DamageIndicator(false);
+    }
+
+    IEnumerator AttackTimer()
+    {
+        yield return new WaitForSeconds(2f);
+        myAnim.SetBool("BossAttacking", false);
     }
 
 }

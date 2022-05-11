@@ -1,0 +1,1122 @@
+fileFormatVersion: 2
+guid: ce65cab1eaea87544a90801107b6b0a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1388881541374402077
+    second: Big-bird-boss-beta-Sheet-export-128x128_0
+  - first:
+      213: 8473464398949202402
+    second: Big-bird-boss-beta-Sheet-export-128x128_1
+  - first:
+      213: -7732440005625627082
+    second: Big-bird-boss-beta-Sheet-export-128x128_2
+  - first:
+      213: 1777319161219572015
+    second: Big-bird-boss-beta-Sheet-export-128x128_3
+  - first:
+      213: -8719470554466321369
+    second: Big-bird-boss-beta-Sheet-export-128x128_4
+  - first:
+      213: 7555075945193226880
+    second: Big-bird-boss-beta-Sheet-export-128x128_5
+  - first:
+      213: 6202098528133886039
+    second: Big-bird-boss-beta-Sheet-export-128x128_6
+  - first:
+      213: 4194521899609017090
+    second: Big-bird-boss-beta-Sheet-export-128x128_7
+  - first:
+      213: -4563400482452957764
+    second: Big-bird-boss-beta-Sheet-export-128x128_8
+  - first:
+      213: -6745539450666213742
+    second: Big-bird-boss-beta-Sheet-export-128x128_9
+  - first:
+      213: 7531891214849974601
+    second: Big-bird-boss-beta-Sheet-export-128x128_10
+  - first:
+      213: -5488779286419422693
+    second: Big-bird-boss-beta-Sheet-export-128x128_11
+  - first:
+      213: -823029709536613365
+    second: Big-bird-boss-beta-Sheet-export-128x128_12
+  - first:
+      213: -3642699435768866659
+    second: Big-bird-boss-beta-Sheet-export-128x128_13
+  - first:
+      213: 7773349923624334043
+    second: Big-bird-boss-beta-Sheet-export-128x128_14
+  - first:
+      213: -5539580999993646230
+    second: Big-bird-boss-beta-Sheet-export-128x128_15
+  - first:
+      213: 4929507889792509777
+    second: Big-bird-boss-beta-Sheet-export-128x128_16
+  - first:
+      213: -848791355261379831
+    second: Big-bird-boss-beta-Sheet-export-128x128_17
+  - first:
+      213: 1445122016872575464
+    second: Big-bird-boss-beta-Sheet-export-128x128_18
+  - first:
+      213: 3735885238333626246
+    second: Big-bird-boss-beta-Sheet-export-128x128_19
+  - first:
+      213: -3891284779890211039
+    second: Big-bird-boss-beta-Sheet-export-128x128_20
+  - first:
+      213: 6513651550572886085
+    second: Big-bird-boss-beta-Sheet-export-128x128_21
+  - first:
+      213: 3868990406232151090
+    second: Big-bird-boss-beta-Sheet-export-128x128_22
+  - first:
+      213: 2679540944574166065
+    second: Big-bird-boss-beta-Sheet-export-128x128_23
+  - first:
+      213: -1603306515008900835
+    second: Big-bird-boss-beta-Sheet-export-128x128_24
+  - first:
+      213: -8774923633161158724
+    second: Big-bird-boss-beta-Sheet-export-128x128_25
+  - first:
+      213: -698963440725410480
+    second: Big-bird-boss-beta-Sheet-export-128x128_26
+  - first:
+      213: -5748695639333888655
+    second: Big-bird-boss-beta-Sheet-export-128x128_27
+  - first:
+      213: -8753734704323699061
+    second: Big-bird-boss-beta-Sheet-export-128x128_28
+  - first:
+      213: -8878798241514509691
+    second: copy_boss_bird_0
+  - first:
+      213: 786012735448195421
+    second: copy_boss_bird_1
+  - first:
+      213: 6556265901543499579
+    second: copy_boss_bird_2
+  - first:
+      213: -2823363655666106179
+    second: copy_boss_bird_3
+  - first:
+      213: 8551715211041810309
+    second: copy_boss_bird_4
+  - first:
+      213: -7494130315152309581
+    second: copy_boss_bird_5
+  - first:
+      213: -3905171093999376178
+    second: copy_boss_bird_6
+  - first:
+      213: -7359659526883844318
+    second: copy_boss_bird_7
+  - first:
+      213: 1720329509286843546
+    second: copy_boss_bird_8
+  - first:
+      213: 5134652898956629693
+    second: copy_boss_bird_9
+  - first:
+      213: -5317578305067245724
+    second: copy_boss_bird_10
+  - first:
+      213: 7916084784196443975
+    second: copy_boss_bird_11
+  - first:
+      213: 3470448244187538024
+    second: copy_boss_bird_12
+  - first:
+      213: 247748441650302398
+    second: copy_boss_bird_13
+  - first:
+      213: 7118984987173500570
+    second: copy_boss_bird_14
+  - first:
+      213: 6635102749126840493
+    second: copy_boss_bird_15
+  - first:
+      213: 1822886237369579345
+    second: copy_boss_bird_16
+  - first:
+      213: 1459309396576372640
+    second: copy_boss_bird_17
+  - first:
+      213: -1433491659031793005
+    second: copy_boss_bird_18
+  - first:
+      213: -7410191221433663118
+    second: copy_boss_bird_19
+  - first:
+      213: 7144642580652616134
+    second: copy_boss_bird_20
+  - first:
+      213: 4668694739507307456
+    second: copy_boss_bird_21
+  - first:
+      213: -1091617000031042713
+    second: copy_boss_bird_22
+  - first:
+      213: 1103939295670062133
+    second: copy_boss_bird_23
+  - first:
+      213: -4787876758820829297
+    second: copy_boss_bird_24
+  - first:
+      213: 3089006179339377220
+    second: copy_boss_bird_25
+  - first:
+      213: 8306154211525703672
+    second: copy_boss_bird_26
+  - first:
+      213: 6344252609786236772
+    second: copy_boss_bird_27
+  - first:
+      213: 966914546299211295
+    second: copy_boss_bird_28
+  - first:
+      213: -4493330346059221973
+    second: copy_boss_bird_29
+  - first:
+      213: 2934640958124832155
+    second: copy_boss_bird_30
+  - first:
+      213: -1001735032910041809
+    second: copy_boss_bird_31
+  - first:
+      213: -5696178458045810566
+    second: copy_boss_bird_32
+  - first:
+      213: 5780600366567085831
+    second: copy_boss_bird_33
+  - first:
+      213: -1883986923249052394
+    second: copy_boss_bird_34
+  - first:
+      213: -3056385713864770354
+    second: copy_boss_bird_35
+  - first:
+      213: 9030668745175010054
+    second: copy_boss_bird_36
+  - first:
+      213: -934513493114461941
+    second: copy_boss_bird_37
+  - first:
+      213: -4659520267583165880
+    second: copy_boss_bird_38
+  - first:
+      213: 3622322868194175378
+    second: copy_boss_bird_39
+  - first:
+      213: -6527169135271910644
+    second: copy_boss_bird_40
+  - first:
+      213: 8852260598614010027
+    second: copy_boss_bird_41
+  - first:
+      213: 2350680153618954733
+    second: copy_boss_bird_42
+  - first:
+      213: -9138118133770839941
+    second: copy_boss_bird_43
+  - first:
+      213: 3693623466560891642
+    second: copy_boss_bird_44
+  - first:
+      213: -6109234855257215436
+    second: copy_boss_bird_45
+  - first:
+      213: -7079750717713982762
+    second: copy_boss_bird_46
+  - first:
+      213: 2817476655902579139
+    second: copy_boss_bird_47
+  - first:
+      213: 516705069643467255
+    second: copy_boss_bird_48
+  - first:
+      213: 1651039728210530387
+    second: copy_boss_bird_49
+  - first:
+      213: -984687472535524142
+    second: copy_boss_bird_50
+  - first:
+      213: -2566287539952816150
+    second: copy_boss_bird_51
+  - first:
+      213: 4804425476606377563
+    second: copy_boss_bird_52
+  - first:
+      213: 3439886103220713125
+    second: copy_boss_bird_53
+  - first:
+      213: 2641537234330134639
+    second: copy_boss_bird_54
+  - first:
+      213: -559605916676968329
+    second: copy_boss_bird_55
+  - first:
+      213: -1949929196852012563
+    second: copy_boss_bird_56
+  - first:
+      213: -4546461172531754403
+    second: copy_boss_bird_57
+  - first:
+      213: 8677818218867467152
+    second: copy_boss_bird_58
+  - first:
+      213: 8539380983208646166
+    second: copy_boss_bird_59
+  - first:
+      213: -4625274744380746360
+    second: copy_boss_bird_60
+  - first:
+      213: 7911700179389459161
+    second: copy_boss_bird_61
+  - first:
+      213: 1276887598092795040
+    second: copy_boss_bird_62
+  - first:
+      213: -4106480631775756827
+    second: copy_boss_bird_63
+  - first:
+      213: 4442246402385044995
+    second: copy_boss_bird_64
+  - first:
+      213: 1182491994334367957
+    second: copy_boss_bird_65
+  - first:
+      213: 5310601460339661218
+    second: copy_boss_bird_66
+  - first:
+      213: -195726625058849590
+    second: copy_boss_bird_67
+  - first:
+      213: -4302774634188933470
+    second: copy_boss_bird_68
+  - first:
+      213: 9197930193255321211
+    second: copy_boss_bird_69
+  - first:
+      213: -6186464063057788694
+    second: copy_boss_bird_70
+  - first:
+      213: 8401626594323704444
+    second: copy_boss_bird_71
+  - first:
+      213: -1238547397203830981
+    second: copy_boss_bird_72
+  - first:
+      213: 6205713157186953126
+    second: copy_boss_bird_73
+  - first:
+      213: -7747587112118112822
+    second: copy_boss_bird_74
+  - first:
+      213: -3471212735809866044
+    second: copy_boss_bird_75
+  - first:
+      213: -5055751733095059194
+    second: copy_boss_bird_76
+  - first:
+      213: 8903809210924479419
+    second: copy_boss_bird_77
+  - first:
+      213: 4690299984137221501
+    second: copy_boss_bird_78
+  - first:
+      213: 2122929152043512112
+    second: copy_boss_bird_79
+  - first:
+      213: 1586960920994465463
+    second: copy_boss_bird_80
+  - first:
+      213: -6244057651814829346
+    second: copy_boss_bird_81
+  - first:
+      213: 4243138450427126549
+    second: copy_boss_bird_82
+  - first:
+      213: -6602865151277344396
+    second: copy_boss_bird_83
+  - first:
+      213: 3457405296046277361
+    second: copy_boss_bird_84
+  - first:
+      213: -4361359814310471563
+    second: copy_boss_bird_85
+  - first:
+      213: 2359460119132717661
+    second: copy_boss_bird_86
+  - first:
+      213: -1570031091457882472
+    second: copy_boss_bird_87
+  - first:
+      213: 1630570135917170714
+    second: copy_boss_bird_88
+  - first:
+      213: 7838931549391652329
+    second: copy_boss_bird_89
+  - first:
+      213: -3324056816426227706
+    second: copy_boss_bird_90
+  - first:
+      213: 689250130593516990
+    second: copy_boss_bird_91
+  - first:
+      213: 7100195327902984145
+    second: copy_boss_bird_92
+  - first:
+      213: 7512851938617386462
+    second: copy_boss_bird_93
+  - first:
+      213: 7828546456491506189
+    second: copy_boss_bird_94
+  - first:
+      213: 7245982347630476164
+    second: copy_boss_bird_95
+  - first:
+      213: 5220303415458659002
+    second: copy_boss_bird_96
+  - first:
+      213: 1593722443606509585
+    second: copy_boss_bird_97
+  - first:
+      213: -6816590265413686042
+    second: copy_boss_bird_98
+  - first:
+      213: -1250907557210850684
+    second: copy_boss_bird_99
+  - first:
+      213: 7896686654108038776
+    second: copy_boss_bird_100
+  - first:
+      213: -7689088072107368712
+    second: copy_boss_bird_101
+  - first:
+      213: 1753501051291648614
+    second: copy_boss_bird_102
+  - first:
+      213: -1724716784329329559
+    second: copy_boss_bird_103
+  - first:
+      213: 9096478197042937186
+    second: copy_boss_bird_104
+  - first:
+      213: 7171884265408412615
+    second: copy_boss_bird_105
+  - first:
+      213: -6824025116163567293
+    second: copy_boss_bird_106
+  - first:
+      213: -7060869649409434606
+    second: copy_boss_bird_107
+  - first:
+      213: -4694999187560412677
+    second: copy_boss_bird_108
+  - first:
+      213: 8383927597514731225
+    second: copy_boss_bird_109
+  - first:
+      213: -7685319764186072989
+    second: copy_boss_bird_110
+  - first:
+      213: -4182349304086379979
+    second: copy_boss_bird_111
+  - first:
+      213: 5273002123961240573
+    second: copy_boss_bird_112
+  - first:
+      213: 8921533480373369887
+    second: copy_boss_bird_113
+  - first:
+      213: -6241942519633164657
+    second: copy_boss_bird_114
+  - first:
+      213: -1792917382670192667
+    second: copy_boss_bird_115
+  - first:
+      213: 6706041374803327934
+    second: copy_boss_bird_116
+  - first:
+      213: -1478062225750153252
+    second: copy_boss_bird_117
+  - first:
+      213: -885277727774992783
+    second: copy_boss_bird_118
+  - first:
+      213: -6479869205621906694
+    second: copy_boss_bird_119
+  - first:
+      213: 6026858193839165165
+    second: copy_boss_bird_120
+  - first:
+      213: 2614224632812115404
+    second: copy_boss_bird_121
+  - first:
+      213: 972381626574415742
+    second: copy_boss_bird_122
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: copy_boss_bird_0
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a2a2e8a0c28c480800000000000000
+      internalID: -8878798241514509691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_1
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51a25d1b6a78ea00800000000000000
+      internalID: 786012735448195421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_2
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37a182d9198cfa50800000000000000
+      internalID: 6556265901543499579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_3
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db00648c6b561d8d0800000000000000
+      internalID: -2823363655666106179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_4
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587a37eecabcda670800000000000000
+      internalID: 8551715211041810309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_5
+      rect:
+        serializedVersion: 2
+        x: 6656
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b24cd81f208ff790800000000000000
+      internalID: -7494130315152309581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_6
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec82b0b949b0ec9c0800000000000000
+      internalID: -3905171093999376178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_7
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fd44847ac3dd990800000000000000
+      internalID: -7359659526883844318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_8
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a941aa1f296dfd710800000000000000
+      internalID: 1720329509286843546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db65d376b93f14740800000000000000
+      internalID: 5134652898956629693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f942d84ba2436b0800000000000000
+      internalID: -5317578305067245724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f57e58b259bdd60800000000000000
+      internalID: 7916084784196443975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8622d267a42892030800000000000000
+      internalID: 3470448244187538024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_13
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd093225ed207300800000000000000
+      internalID: 247748441650302398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_14
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96b0d9b027bbc260800000000000000
+      internalID: 7118984987173500570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_15
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da05ce9cbce941c50800000000000000
+      internalID: 6635102749126840493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_16
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157bc54ff513c4910800000000000000
+      internalID: 1822886237369579345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_17
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a703581a22804410800000000000000
+      internalID: 1459309396576372640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_18
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392bcea5ee63b1ce0800000000000000
+      internalID: -1433491659031793005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_19
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2718ab05856b92990800000000000000
+      internalID: -7410191221433663118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_20
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9edeab29ed62360800000000000000
+      internalID: 7144642580652616134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_21
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3611931298ac040800000000000000
+      internalID: 4668694739507307456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_22
+      rect:
+        serializedVersion: 2
+        x: 6656
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7634f524f1cc9d0f0800000000000000
+      internalID: -1091617000031042713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_23
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c4204c0faf15f00800000000000000
+      internalID: 1103939295670062133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_24
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87c222847b0e8db0800000000000000
+      internalID: -4787876758820829297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: copy_boss_bird_25
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a928cf0ca5eda20800000000000000
+      internalID: 3089006179339377220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

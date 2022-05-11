@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     PolygonCollider2D BodyCollider;
     BoxCollider2D FeetCollider;
+    CapsuleCollider2D BirdCollider;
     SpriteRenderer spriteRenderer;
     Animator myAnim;
     public GameObject damageLight;
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         BodyCollider = GetComponent<PolygonCollider2D>();
         FeetCollider = GetComponent<BoxCollider2D>();
+        BirdCollider = GetComponent<CapsuleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         myAnim = GetComponent<Animator>();
 
@@ -176,9 +178,8 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bird"))
         {
-            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Birds")) )
+            if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Birds")) )  // this code is probably not necessary anymore
             {
-                //TakeDamage(25f);
                 DamageKick();
                 Destroy(collision.gameObject);
             }
@@ -206,6 +207,15 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Boss"))
         {
             mayDamage = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bird"))
+        {
+            DamageKick();
+            Destroy(collision.gameObject);
         }
     }
 

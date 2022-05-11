@@ -114,6 +114,8 @@ public class Fighting_Player : MonoBehaviour
      // when the attack button is pressed, first set walking to false in animator and set attacking to true in animator
      // then after like 0.5 seconds or so set attack to false and walking to true and turn off the animator
 
+    // alternate idea: have a bug checker that enables walking animation when player is stuck in attack animation for too long
+
     // new attack ideas: how about we just change the player's sprite to the final frame of the attack.  Also turn off the animator when attacking.  Turn the animator back on after the attack is done?
     private void Animations()
     {
