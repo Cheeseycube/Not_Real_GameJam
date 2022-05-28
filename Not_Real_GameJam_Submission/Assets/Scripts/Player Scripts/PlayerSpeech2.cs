@@ -29,7 +29,7 @@ public class PlayerSpeech2 : MonoBehaviour
     {
         switch (CurrScene)
         {
-            case 1:
+            case 2:
                 Scene1();
                 break;
 

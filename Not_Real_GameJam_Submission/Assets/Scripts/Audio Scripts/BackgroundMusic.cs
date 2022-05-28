@@ -13,12 +13,6 @@ public class BackgroundMusic : MonoBehaviour
 
     private void Awake()
     {
-        /*if (SceneManager.GetActiveScene().buildIndex == 5)
-        {
-            myAudio.clip = bossTheme;
-            print("boss time!");
-            //myAudio.Play();
-        }*/
 
         int numMusic = FindObjectsOfType<BackgroundMusic>().Length;
         if (numMusic > 1)
@@ -43,6 +37,12 @@ public class BackgroundMusic : MonoBehaviour
         {
             myAudio.clip = mainTheme;
         }*/
+    }
+
+    public static void AudioToggle()
+    {
+        AudioListener.pause = !AudioListener.pause;
+
     }
 
     // Update is called once per frame

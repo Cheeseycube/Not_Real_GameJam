@@ -31,10 +31,6 @@ public class PlayerSpeech : MonoBehaviour
                 {
                     StartCoroutine(SpeechWait2());
                 }
-                else
-                {
-                    break;
-                }
                 break;
 
             default:
