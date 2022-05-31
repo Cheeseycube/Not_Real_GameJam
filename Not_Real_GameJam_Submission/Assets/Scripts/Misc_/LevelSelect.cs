@@ -37,19 +37,19 @@ public class LevelSelect : MonoBehaviour
     public void StartLevel1()
     {
         //FindObjectOfType<GameSession>().NewGame();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void StartLevel2()
     {
         //FindObjectOfType<GameSession>().NewGame();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 
     public void StartLevel3()
     {
         //FindObjectOfType<GameSession>().NewGame();
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 
     public void StartLevel4()
