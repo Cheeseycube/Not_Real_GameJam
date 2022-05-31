@@ -2083,6 +2083,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4338158307154979479, guid: 61fc99c2ebe2eec4b9af261209bfe9df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1440880826}
+    - target: {fileID: 4338158307154979479, guid: 61fc99c2ebe2eec4b9af261209bfe9df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleAudio
+      objectReference: {fileID: 0}
     - target: {fileID: 6131090560940434754, guid: 61fc99c2ebe2eec4b9af261209bfe9df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2097,7 +2105,7 @@ PrefabInstance:
       objectReference: {fileID: 1440880826}
     - target: {fileID: 6131090561892457164, guid: 61fc99c2ebe2eec4b9af261209bfe9df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleAudio
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6131090562140709402, guid: 61fc99c2ebe2eec4b9af261209bfe9df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

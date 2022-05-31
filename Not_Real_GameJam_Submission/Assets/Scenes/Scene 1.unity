@@ -113692,6 +113692,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Music
       objectReference: {fileID: 0}
+    - target: {fileID: 2931459079632578414, guid: c369d98c477e5094082756c46068c12d, type: 3}
+      propertyPath: bossTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bb62a233723641498b61c168db814e9, type: 3}
+    - target: {fileID: 2931459079632578414, guid: c369d98c477e5094082756c46068c12d, type: 3}
+      propertyPath: mainTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 603643a1ecb3b9243b31ef7c9c8e94cd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c369d98c477e5094082756c46068c12d, type: 3}
 --- !u!1001 &3962101341874185551
