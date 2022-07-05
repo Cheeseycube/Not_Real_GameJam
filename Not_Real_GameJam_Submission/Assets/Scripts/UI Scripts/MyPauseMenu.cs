@@ -11,7 +11,7 @@ public class MyPauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     //public GameObject pauseFirstButton;
     public static bool isPaused;
-    //public static bool ControllerPaused = false;
+    public static bool ControllerPaused = false;
 
     //BackgroundMusic musicObj;
 

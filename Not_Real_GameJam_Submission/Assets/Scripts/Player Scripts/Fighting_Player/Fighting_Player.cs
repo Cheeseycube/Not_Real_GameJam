@@ -9,19 +9,22 @@ public class Fighting_Player : MonoBehaviour
     PolygonCollider2D bodyCollider;
     BoxCollider2D FeetCollider;
     Animator myAnim;
+    public GameObject damageLight;
 
     // Booleans
-    private bool PlayerDead = false;
+    public static bool PlayerDead = false;
     private bool Paused = false;
     private bool isJumping = false;
     public static bool Basic_attacking = false;
-    private bool mayAttack = true;
+    public static bool mayAttack = true;
     private bool attack_ending = false;
+    private bool facingLeft = false;
 
     // floats and ints
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 11f;
     [SerializeField] float heldjumpSpeed = 5f;
+    [SerializeField] public static float health = 100f;
     private float mayJump = 0.1f;
     private float timer;
 
@@ -66,10 +69,12 @@ public class Fighting_Player : MonoBehaviour
         {
             //spriteRenderer.flipX = true;
             gameObject.transform.localScale = new Vector2(-3, gameObject.transform.localScale.y);
+            facingLeft = true;
         }
         else if (horizontalInput > 0)
         {
             gameObject.transform.localScale = new Vector2(3, gameObject.transform.localScale.y);
+            facingLeft = false;
         }
     }
 
@@ -82,7 +87,7 @@ public class Fighting_Player : MonoBehaviour
 
         mayJump -= Time.deltaTime;
 
-        if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (FeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || FeetCollider.IsTouchingLayers(LayerMask.GetMask("Boss")))
         {
             mayJump = 0.1f;
         }
@@ -149,18 +154,47 @@ public class Fighting_Player : MonoBehaviour
     // what we need is to add in a little walk animation after the attack, that is considered part of the attack animation as a whole
     private void BasicAttack()
     {
+        //print(mayAttack);
         if (Input.GetKeyDown(KeyCode.LeftShift) && mayAttack)
         {
+            //print("attacking");
             mayAttack = false;
             Basic_attacking = true;
+            //print(Basic_attacking);
             StartCoroutine(AttackRepeatTimer());
             StartCoroutine(AttackTimer());
         }
     }
 
+    public void TakeDamage(float damageDealt)
+    {
+        health -= damageDealt;
+        if (health <= 0f)
+        {
+            PlayerDead = true;
+        }
+    }
+
+    public void DamageKick()
+    {
+        if (facingLeft)
+        {
+            rb.velocity = new Vector2(30f, 5f);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-30f, 5f);
+        }
+    }
+
+    public void DamageIndicator(bool isDamaged)
+    {
+        damageLight.SetActive(isDamaged);
+    }
+
     IEnumerator AttackRepeatTimer()
     {
-        yield return new WaitForSeconds(0.3f);  // originally 1f, probably can't be less than 0.2f
+        yield return new WaitForSeconds(1f);  // originally 1f, probably can't be less than 0.2f
         mayAttack = true;
     }
 
@@ -177,4 +211,6 @@ public class Fighting_Player : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         attack_ending = false;
     }
+
+   
 }

@@ -7,6 +7,9 @@ public class GameSession : MonoBehaviour
 {
     public static bool firstBossFight = true;
     public static bool bossDead = false;
+
+    public GameObject healthBar;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -33,6 +36,17 @@ public class GameSession : MonoBehaviour
         {
             SceneManager.LoadScene(6);
         }
-        
+
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            healthBar.SetActive(false);
+        }
+        else
+        {
+            healthBar.SetActive(true);
+        }
+
     }
+
+    
 }

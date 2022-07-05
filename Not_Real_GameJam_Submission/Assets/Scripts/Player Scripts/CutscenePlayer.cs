@@ -29,7 +29,7 @@ public class CutscenePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - timer < 3.2f)
+        if (Time.timeSinceLevelLoad - timer < 3.2f)
         {
             StartCoroutine(Walking());
         }

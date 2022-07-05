@@ -16,9 +16,7 @@ public class LevelSelect : MonoBehaviour
     void Start()
     {
         levelSelect.SetActive(true);
-        // uncomment the below for controller support
-
-        /*if (MyPauseMenu.ControllerPaused)
+        if (MyPauseMenu.ControllerPaused)
         {
             // clear selected object
             EventSystem.current.SetSelectedGameObject(null);
@@ -29,7 +27,7 @@ public class LevelSelect : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(pauseInvisibleButton);
-        }*/
+        }
     }
 
 
@@ -37,19 +35,19 @@ public class LevelSelect : MonoBehaviour
     public void StartLevel1()
     {
         //FindObjectOfType<GameSession>().NewGame();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void StartLevel2()
     {
         //FindObjectOfType<GameSession>().NewGame();
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     public void StartLevel3()
     {
         //FindObjectOfType<GameSession>().NewGame();
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(3);
     }
 
     public void StartLevel4()

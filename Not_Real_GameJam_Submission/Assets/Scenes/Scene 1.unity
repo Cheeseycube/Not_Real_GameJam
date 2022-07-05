@@ -113753,12 +113753,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3962101342884544091, guid: 40f0eca94089c464880fb91b61486b15, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 3962101341874185552}
     - target: {fileID: 3962101342884544092, guid: 40f0eca94089c464880fb91b61486b15, type: 3}
       propertyPath: m_Name
       value: GameSession Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40f0eca94089c464880fb91b61486b15, type: 3}
+--- !u!1 &3962101341874185552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3962101341411977727, guid: 40f0eca94089c464880fb91b61486b15, type: 3}
+  m_PrefabInstance: {fileID: 3962101341874185551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4254842500235125456
 PrefabInstance:
   m_ObjectHideFlags: 0

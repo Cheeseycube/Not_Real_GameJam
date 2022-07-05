@@ -33,11 +33,6 @@ public class PlayerDeath : MonoBehaviour
             case 1:
                 Level1();
                 break;
-
-            case 5:
-                BossLevel();
-                break;
-
             default:
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 Player.health = 100f;

@@ -7,14 +7,16 @@ public class BossLogic : MonoBehaviour
     Animator myAnim;
     Rigidbody2D rb;
     BoxCollider2D BodyCollider;
+    CapsuleCollider2D attackCollider;
 
     private float timer = 0;
+    private float attackTimer = 2.5f; // was 4 seconds
     public static float bossHealth = 100f;
     private bool CanDamage = true;
 
     public Rigidbody2D playerMovement;
     public GameObject playerObj;
-    private float speed = 5f;
+    private float speed = 3f;
     private bool CanJump = true;
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class BossLogic : MonoBehaviour
         myAnim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         BodyCollider = GetComponent<BoxCollider2D>();
+        attackCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -39,60 +42,64 @@ public class BossLogic : MonoBehaviour
         }*/
         if (PlayerSpeech2.FightStarted)
         {
-            //Move();
+            Move();
             Attack();
+            DamagePlayer();
         }
-       // DamagePlayer();
+
+        // teleports boss down if they get pushed into the air
+        if (transform.position.y > -0.78f)
+        {
+            transform.Translate(0, -0.2f, 0);
+        }
+
     }
 
     private void Attack()
     {
-        //timer = 0;
-        /*if (Time.time - timer > 2f)
+       /* if ((transform.position.x - playerObj.transform.position.x < 10))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 30f);
-            timer = Time.time;
+            myAnim.SetBool("BossAttacking", true);
+            attackCollider.enabled = true;
+            StartCoroutine(AttackTimer());
         }*/
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        attackTimer -= Time.deltaTime;
+        if (attackTimer <= 0f)
         {
-            print("atttaaaaaaaack");
             myAnim.SetBool("BossAttacking", true);
+            attackCollider.enabled = true;
             StartCoroutine(AttackTimer());
+            attackTimer = 2.5f;  // was 4 seconds
         }
-        /*if ((transform.position.x - playerObj.transform.position.x < 10))
-        {
-            if (CanJump)
-            {
-                //print("attacking");
-                rb.velocity = new Vector2(rb.velocity.x, 30f);
-                //transform.Translate(0, 5, 0);
-                CanJump = false;
-            }
-        }
-        else
-        {
-            print("jump again");
-            CanJump = true;
-        }*/
+        
     }
 
     private void Move()
     {
         transform.position = Vector2.MoveTowards(transform.position, playerObj.transform.position, speed * Time.deltaTime);
+        if (playerObj.transform.position.x > transform.position.x)
+        {
+            //spriteRenderer.flipX = true;
+            gameObject.transform.localScale = new Vector2(-3, gameObject.transform.localScale.y);
+        }
+        else if (playerObj.transform.position.x < transform.position.x)
+        {
+            gameObject.transform.localScale = new Vector2(3, gameObject.transform.localScale.y);
+        }
     }
 
     private void DamagePlayer()
     {
-        if (BodyCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && CanDamage)
+        if (attackCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && CanDamage)
         {
-            FindObjectOfType<Player>().TakeDamage(25f);
-            FindObjectOfType<Player>().DamageKick();
+            FindObjectOfType<Fighting_Player>().TakeDamage(25f);
+            FindObjectOfType<Fighting_Player>().DamageKick();
             StartCoroutine(StartDamageIndication());
             CanDamage = false;
         }
 
-        if (!BodyCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if (!attackCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && attackCollider.enabled == false)
         {
             CanDamage = true;
         }
@@ -100,7 +107,7 @@ public class BossLogic : MonoBehaviour
 
     public void DamageBoss()
     {
-        bossHealth -= 25f;
+        bossHealth -= 12.5f;  // was 25
         if (bossHealth <= 0)
         {
             GameSession.bossDead = true;
@@ -110,15 +117,16 @@ public class BossLogic : MonoBehaviour
 
     IEnumerator StartDamageIndication()
     {
-        FindObjectOfType<Player>().DamageIndicator(true);
+        FindObjectOfType<Fighting_Player>().DamageIndicator(true);
         yield return new WaitForSeconds(0.5f);
-        FindObjectOfType<Player>().DamageIndicator(false);
+        FindObjectOfType<Fighting_Player>().DamageIndicator(false);
     }
 
     IEnumerator AttackTimer()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f); // originally 2 seconds
         myAnim.SetBool("BossAttacking", false);
+        attackCollider.enabled = false;
     }
 
 }
