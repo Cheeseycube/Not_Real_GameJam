@@ -9,7 +9,7 @@ public class StartButton : MonoBehaviour
     //public GameObject buttonText;
     private float FlashingTimer = 1f;
     private bool buttonActive = false;
-    private float fadeSpeed = 2f;
+    private float fadeSpeed = 2f; // was 2
     private bool fadingOut = true;
 
     public TextMeshProUGUI startText;
@@ -27,8 +27,9 @@ public class StartButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        print(fadingOut);
         if (fadingOut)
         {
             fadeOut();
@@ -51,7 +52,7 @@ public class StartButton : MonoBehaviour
         else
         {
             //fadingOut = false;
-            StartCoroutine(FadeTimer());
+            StartCoroutine(FadeTimerFalse());
         }
     }
 
@@ -65,14 +66,20 @@ public class StartButton : MonoBehaviour
         else
         {
             //fadingOut = true;
-            StartCoroutine(FadeTimer());
+            StartCoroutine(FadeTimerTrue());
         }
     }
     
-    IEnumerator FadeTimer()
+    IEnumerator FadeTimerFalse()
     {
         yield return new WaitForSeconds(0.5f);
-        fadingOut = !fadingOut;
+        fadingOut = false;
+    }
+
+    IEnumerator FadeTimerTrue()
+    {
+        yield return new WaitForSeconds(0.5f);
+        fadingOut = true;
     }
 
     public void StartGame()
