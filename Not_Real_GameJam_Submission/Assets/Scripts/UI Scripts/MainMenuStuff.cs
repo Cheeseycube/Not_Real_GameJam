@@ -8,12 +8,16 @@ public class MainMenuStuff : MonoBehaviour
     private float fadeSpeed = 2f;
     public TextMeshProUGUI startText;
     Color32 startColor;
+
+    public static bool GameStarted = false;
     // Start is called before the first frame update
     void Start()
     {
         startColor = startText.color;
         startColor = new Color32(startColor.r, startColor.g, startColor.b, 0);
         startText.color = startColor;
+
+        GameStarted = true;
     }
 
     // Update is called once per frame

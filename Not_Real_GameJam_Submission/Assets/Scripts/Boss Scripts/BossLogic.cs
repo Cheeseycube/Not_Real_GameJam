@@ -16,8 +16,9 @@ public class BossLogic : MonoBehaviour
 
     public Rigidbody2D playerMovement;
     public GameObject playerObj;
-    private float speed = 3f;
+    private static float speed = 3f;    // idk I had to make this static for some reason
     private bool CanJump = true;
+    Vector2 DefaultMove = new Vector2(speed * -1, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,8 @@ public class BossLogic : MonoBehaviour
         }*/
         if (PlayerSpeech2.FightStarted)
         {
-            Move();
+            RBMove();
+            //Move();
             Attack();
             DamagePlayer();
         }
@@ -86,6 +88,32 @@ public class BossLogic : MonoBehaviour
         else if (playerObj.transform.position.x < transform.position.x)
         {
             gameObject.transform.localScale = new Vector2(3, gameObject.transform.localScale.y);
+        }
+    }
+
+    private void RBMove()
+    {
+        if (!myAnim.GetBool("BossAttacking"))
+        {
+            if (playerMovement.velocity.x < 0)
+            {
+                rb.velocity = new Vector2(speed * -1, 0);
+                DefaultMove = new Vector2(speed * -1, 0);
+            }
+            else if (playerMovement.velocity.x > 0)
+            {
+                rb.velocity = new Vector2(speed, 0);
+                DefaultMove = new Vector2(speed, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, 0);
+            }
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+            transform.position = Vector2.MoveTowards(transform.position, playerObj.transform.position, speed * Time.deltaTime);
         }
     }
 

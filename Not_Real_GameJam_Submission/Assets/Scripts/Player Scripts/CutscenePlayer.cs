@@ -23,6 +23,10 @@ public class CutscenePlayer : MonoBehaviour
 
     private void Awake()
     {
+        if (!MainMenuStuff.GameStarted)
+        {
+            SceneManager.LoadScene(9);
+        }
         //timer = Time.time;
     }
 
