@@ -16,6 +16,7 @@ public class BossLogic : MonoBehaviour
 
     public Rigidbody2D playerMovement;
     public GameObject playerObj;
+    public GameObject damageLight;
     private static float speed = 3f;    // idk I had to make this static for some reason
     private bool CanJump = true;
     Vector2 DefaultMove = new Vector2(speed * -1, 0);
@@ -136,6 +137,7 @@ public class BossLogic : MonoBehaviour
     public void DamageBoss()
     {
         bossHealth -= 12.5f;  // was 25
+        StartCoroutine(BossStartDamageIndication());
         if (bossHealth <= 0)
         {
             GameSession.bossDead = true;
@@ -143,6 +145,10 @@ public class BossLogic : MonoBehaviour
         }
     }
 
+    private void BossDamageIndicator(bool isDamaged)
+    {
+        damageLight.SetActive(isDamaged);
+    }
     IEnumerator StartDamageIndication()
     {
         FindObjectOfType<Fighting_Player>().DamageIndicator(true);
@@ -155,6 +161,13 @@ public class BossLogic : MonoBehaviour
         yield return new WaitForSeconds(1f); // originally 2 seconds
         myAnim.SetBool("BossAttacking", false);
         attackCollider.enabled = false;
+    }
+
+    IEnumerator BossStartDamageIndication()
+    {
+        BossDamageIndicator(true);
+        yield return new WaitForSeconds(0.5f);
+        BossDamageIndicator(false);
     }
 
 }
