@@ -44,8 +44,9 @@ public class BossLogic : MonoBehaviour
         }*/
         if (PlayerSpeech2.FightStarted)
         {
-            RBMove();
+            //RBMove();
             //Move();
+            BetterMovement();
             Attack();
             DamagePlayer();
         }
@@ -110,6 +111,36 @@ public class BossLogic : MonoBehaviour
             {
                 rb.velocity = new Vector2(0, 0);
             }
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+            transform.position = Vector2.MoveTowards(transform.position, playerObj.transform.position, speed * Time.deltaTime);
+        }
+    }
+
+    private void BetterMovement()
+    {
+        if (!myAnim.GetBool("BossAttacking"))
+        {
+            if (playerObj.transform.position.x < transform.position.x)
+            {
+                gameObject.transform.localScale = new Vector2(3, gameObject.transform.localScale.y);
+                rb.velocity = new Vector2(speed * -1, 0);
+            }
+            else if (playerObj.transform.position.x > transform.position.x)
+            {
+                gameObject.transform.localScale = new Vector2(-3, gameObject.transform.localScale.y);
+                rb.velocity = new Vector2(speed, 0);
+            }
+            /*if (playerMovement.velocity.x < 0)
+            {
+                rb.velocity = new Vector2(speed * -1, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, 0);
+            }*/
         }
         else
         {
